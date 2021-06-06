@@ -1,5 +1,5 @@
 {
-  "name": "my-cred-app",
+  "name": "vimal-data",
   "version": "1.0.0",
   "description": "Vimal personal and official credentials",
   "main": "main.js",
@@ -11,6 +11,8 @@
   "author": "Vimal",
   "license": "MIT",
   "build": {
+    "productName": "Vimal Data",
+    "executableName": "Vimal Data",
     "appId": "com.example.app",
     "win": {
       "target": "nsis",
