@@ -1,0 +1,24 @@
+{
+  "name": "my-cred-app",
+  "version": "1.0.0",
+  "description": "Vimal personal and official credentials",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": "",
+  "author": "Vimal",
+  "license": "MIT",
+  "build": {
+    "appId": "com.example.app",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "~13.1.1",
+    "electron-builder": "^22.10.5"
+  }
+}

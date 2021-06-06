@@ -1,0 +1,192 @@
+:root {
+  --page-bg-color: #116561;
+  --header-bg-color: #3c8a87;
+  --body-bg-color: #b0cccb;
+  --header-item-bg-color: #116561;
+  --header-item-hvr-bg-color: #fffff6;
+  --header-item-txt-color: #fffff6;
+  --header-item-hvr-txt-color: #116561;
+  --body-item-bg-color: #fffff6;
+  --body-item-shdw-color: #00e4d9;
+  --body-item-header-bg-color: #1c7d79;
+  --body-item-header-txt-color: white;
+  --body-item-header-icon-color: #279c97;
+  --body-item-header-hvr-icon-color: #30c3bc;
+  --body-item-header-shp-1-color: #18948f;
+  --body-item-header-shp-2-color: #90b9b8;
+  --body-item-body-txt-color: #116561;
+  --body-item-body-copy-color: #11656126;
+  --body-item-body-hvr-copy-color: #116561;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--page-bg-color);
+  font-family: "Lato", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  height: calc(100vh - 15px);
+  background: var(--page-bg-color);
+  display: flex;
+}
+
+.header-container {
+  flex: 1;
+  background: var(--header-bg-color);
+  border-radius: 25px 0;
+  padding: 20px;
+}
+
+.header-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: var(--header-item-bg-color);
+  color: var(--header-item-txt-color);
+  position: relative;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header-item.active,
+.header-item:hover {
+  background: var(--header-item-hvr-bg-color);
+  color: var(--header-item-hvr-txt-color);
+}
+
+.hvr-bubble-float-left:before {
+  border-color: transparent var(--header-item-bg-color) transparent transparent !important;
+}
+
+.active.hvr-bubble-float-left:before,
+.hvr-bubble-float-left:hover:before {
+  border-color: transparent var(--header-item-hvr-bg-color) transparent
+    transparent !important;
+}
+
+.body-container {
+  margin-left: 10px;
+  flex: 7;
+  background: var(--body-bg-color);
+  border-radius: 25px 0;
+  padding: 10px;
+  display: inline-block;
+}
+
+.body-item {
+  background: var(--body-item-bg-color);
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  height: 111px;
+  float: left;
+}
+
+.hvr-glow:hover,
+.hvr-glow:focus,
+.hvr-glow:active {
+  box-shadow: 0 0px 20px var(--body-item-shdw-color) !important;
+}
+
+.body-item-header {
+  background: var(--body-item-header-bg-color);
+}
+
+.body-item-header-title {
+  padding: 3px 17px;
+  display: inline-block;
+  font-size: 16px;
+  width: calc(100% - 179px);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.body-item-header-title a {
+  color: var(--body-item-header-txt-color);
+  text-decoration: none;
+}
+
+.body-item-header-shapes {
+  display: inline-block;
+  width: 110px;
+}
+
+.body-item-header-shape-1 {
+  width: 0;
+  height: 0;
+  border-top: 9px solid var(--body-item-header-shp-1-color);
+  border-right: 10px solid transparent;
+  border-left: 100px solid transparent;
+}
+
+.body-item-header-shape-2 {
+  width: 0;
+  height: 0;
+  border-bottom: 6px solid var(--body-item-header-shp-2-color);
+  border-right: 60px solid transparent;
+  border-left: 40px solid transparent;
+}
+
+.body-item-header-icon {
+  display: inline-block;
+  font-size: 16px;
+  padding: 4px 3px;
+  color: var(--body-item-header-icon-color);
+  float: right;
+  width: 25px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.body-item-header-icon:hover {
+  color: var(--body-item-header-hvr-icon-color);
+}
+
+.body-item-body {
+  padding: 1px 15px;
+}
+
+.body-item-body-item {
+  color: var(--body-item-body-txt-color);
+  padding: 4px 2px;
+}
+
+.body-item-body-item-icon,
+.body-item-body-item-copy {
+  display: inline-block;
+  font-size: 13px;
+  width: 12px;
+  justify-content: center;
+  text-align: center;
+}
+
+.body-item-body-item-title {
+  display: inline-flex;
+  margin: 0 5px;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 42px);
+  text-overflow: ellipsis;
+}
+
+.body-item-body-item-copy {
+  margin-top: -2px;
+  color: var(--body-item-body-copy-color);
+  cursor: pointer;
+}
+
+.body-item-body-item-copy:hover {
+  color: var(--body-item-body-hvr-copy-color);
+}
